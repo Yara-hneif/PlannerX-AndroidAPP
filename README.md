@@ -14,5 +14,5 @@ plannerX is an application that functions to take notes, there is a priority lab
 - Room 
 - WorkManager
 - Data Binding
-- 
+
 ## By : Yara Hneif & Alaa Trablse
