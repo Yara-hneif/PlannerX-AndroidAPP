@@ -1,6 +1,8 @@
 
-## By : Yara Hneif & Alaa Trablse
+## PlannerX
+
 ![thumbnail](Imeges_Video/Thumbnail.png)
+
 plannerX is an application that functions to take notes, there is a priority label to categorize which priority is more important. In addition, this application also has a feature to add tasks reminder.
 
 
@@ -12,3 +14,5 @@ plannerX is an application that functions to take notes, there is a priority lab
 - Room 
 - WorkManager
 - Data Binding
+- 
+## By : Yara Hneif & Alaa Trablse
