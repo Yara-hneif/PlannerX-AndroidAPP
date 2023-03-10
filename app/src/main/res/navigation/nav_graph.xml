@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/noteListFragment">
+
+    <fragment
+        android:id="@+id/noteListFragment"
+        android:name="com.example.plannerX.ui.note.list.NoteListFragment"
+        android:label="fragment_note_list"
+        tools:layout="@layout/fragment_note_list" >
+        <action
+            android:id="@+id/action_noteListFragment_to_noteUpdateFragment"
+            app:destination="@id/noteUpdateFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_noteListFragment_to_noteAddFragment"
+            app:destination="@id/noteAddFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteAddFragment"
+        android:name="com.example.plannerX.ui.note.add.NoteAddFragment"
+        android:label="Add Note"
+        tools:layout="@layout/fragment_note_add" />
+    <fragment
+        android:id="@+id/noteUpdateFragment"
+        android:name="com.example.plannerX.ui.note.update.NoteUpdateFragment"
+        android:label="Update Note"
+        tools:layout="@layout/fragment_note_update" >
+        <argument
+            android:name="currentNote"
+            app:argType="com.example.plannerX.data.entities.Note" />
+    </fragment>
+    <dialog
+        android:id="@+id/todoAddFragment"
+        android:name="com.example.plannerX.ui.todo.add.TodoAddFragment"
+        android:label="fragment_todo_add"
+        tools:layout="@layout/fragment_todo_add" />
+    <dialog
+        android:id="@+id/todoUpdateFragment"
+        android:name="com.example.plannerX.ui.todo.update.TodoUpdateFragment"
+        android:label="fragment_todo_update"
+        tools:layout="@layout/fragment_todo_update" >
+        <argument
+            android:name="currentTodo"
+            app:argType="com.example.plannerX.data.entities.Todo" />
+    </dialog>
+    <fragment
+        android:id="@+id/todoListFragment"
+        android:name="com.example.plannerX.ui.todo.list.TodoListFragment"
+        android:label="TodoListFragment" >
+        <action
+            android:id="@+id/action_todoListFragment_to_todoAddFragment"
+            app:destination="@id/todoAddFragment" />
+        <action
+            android:id="@+id/action_todoListFragment_to_todoUpdateFragment"
+            app:destination="@id/todoUpdateFragment" />
+    </fragment>
+</navigation>
